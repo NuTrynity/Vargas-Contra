@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
 
     [Range(0f, 45f)] public float spread_angle = 5f;
 
+    [SerializeField] private bool infinite_ammo;
     private PlayerMovement p_script;
     private bool can_fire = true;
 
@@ -58,7 +59,7 @@ public class Weapon : MonoBehaviour
 
     public virtual void shoot()
     {
-        if (ammo <= 0 || !can_fire)
+        if (ammo <= 0 && !can_fire)
         {
             return;
         }
@@ -78,7 +79,10 @@ public class Weapon : MonoBehaviour
             bullet_script.set_properties(weapon_damage, spread_dir);
         }
 
-        ammo--;
+        if (!infinite_ammo)
+        {
+            ammo--;
+        }
         StartCoroutine(cooldown());
     }
 }

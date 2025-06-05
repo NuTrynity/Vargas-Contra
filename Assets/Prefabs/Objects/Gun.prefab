@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1275589539659018210, guid: a3253ffa9d983c23dbaa6b90a6c9fc7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   bullet_amt: 1
   ammo: 50
   fire_rate: 1
-  p_script: {fileID: 0}
+  spread_angle: 5
 --- !u!1 &4552766600064501121
 GameObject:
   m_ObjectHideFlags: 0

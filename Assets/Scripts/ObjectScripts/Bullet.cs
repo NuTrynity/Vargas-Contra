@@ -12,22 +12,16 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, life_time);
     }
 
-    void FixedUpdate()
-    {
-        rb.linearVelocity = transform.right * speed * Time.deltaTime;
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (!collision.CompareTag("Player"))
         {
-            return;
-        }
-
-        HealthComponent enemy_health = collision.GetComponent<HealthComponent>();
-        if (enemy_health != null)
-        {
-            enemy_health.damage(-damage);
+            HealthComponent health_component = collision.GetComponent<HealthComponent>();
+            if (health_component != null)
+            {
+                health_component.damage(-damage);
+                Destroy(gameObject);
+            }
         }
     }
 
