@@ -19,11 +19,15 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if collision is Enemy
-
-        if (!collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            return;
+        }
+
+        HealthComponent enemy_health = collision.GetComponent<HealthComponent>();
+        if (enemy_health != null)
+        {
+            enemy_health.damage(-damage);
         }
     }
 
