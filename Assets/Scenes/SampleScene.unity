@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d21d1cb69d8d3448f071a8c3702ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_health: 1
+  max_health: 5
 --- !u!212 &1091093770
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -18,10 +18,7 @@ public class Weapon : MonoBehaviour
 
     void Start()
     {
-        if (p_script == null)
-        {
-            p_script = GetComponentInParent<PlayerMovement>();
-        }
+        p_script = GetComponentInParent<PlayerMovement>();
     }
 
     void Update()
@@ -59,7 +56,7 @@ public class Weapon : MonoBehaviour
 
     public virtual void shoot()
     {
-        if (ammo <= 0 && !can_fire)
+        if (ammo <= 0 || !can_fire)
         {
             return;
         }
