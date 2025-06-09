@@ -5,6 +5,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
     public Transform barrel;
+    public AudioClip weapon_audio;
     public int weapon_damage;
     public int bullet_amt;
     public int ammo;
@@ -25,7 +26,7 @@ public class Weapon : MonoBehaviour
     {
         face_gun();
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && Time.timeScale != 0f)
         {
             shoot();
         }
@@ -75,6 +76,8 @@ public class Weapon : MonoBehaviour
 
             bullet_script.set_properties(weapon_damage, spread_dir);
         }
+
+        AudioComponent.instance.play_sound(weapon_audio, transform, 1f);
 
         if (!infinite_ammo)
         {

@@ -18,6 +18,5 @@ public class PlayerGunManager : MonoBehaviour
         Destroy(player_weapon);
         player_weapon = Instantiate(weapon, transform.position, transform.rotation);
         player_weapon.transform.SetParent(transform);
-        Debug.Log($"Weapon changed to {weapon}");
     }
 }

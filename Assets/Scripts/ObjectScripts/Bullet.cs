@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public string ignore_collision_tag;
     public int damage;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed = 1024f;
@@ -14,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
+        if (!collision.CompareTag(ignore_collision_tag))
         {
             HealthComponent health_component = collision.GetComponent<HealthComponent>();
             if (health_component != null)

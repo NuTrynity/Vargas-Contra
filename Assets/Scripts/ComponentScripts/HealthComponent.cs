@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class HealthComponent : MonoBehaviour
 {
+    public UnityEvent die;
+
     public int max_health;
     private int health;
 
@@ -17,6 +19,7 @@ public class HealthComponent : MonoBehaviour
 
         if (health <= 0)
         {
+            die.Invoke();
             Destroy(transform.gameObject);
         }
     }

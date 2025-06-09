@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7368248913309051741, guid: a45d0b4ffa8aa27eea83b024d8643248, type: 3}
   barrel: {fileID: 7325954828918507736}
+  weapon_audio: {fileID: 8300000, guid: cac21b82c0ffcc12096a265c003a2efc, type: 3}
   weapon_damage: 1
   bullet_amt: 1
   ammo: 50

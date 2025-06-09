@@ -109,7 +109,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.13, y: 1.13}
+  m_Size: {x: 1.13, y: 1.05}
   m_EdgeRadius: 0
 --- !u!114 &1888900542937144474
 MonoBehaviour:
@@ -143,10 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986819bd258382a55bb91bbb64a0d87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 379195601015349557}
   starter_weapon: {fileID: 1341898433849956997, guid: 6831a9011475cb623ad060edb67a3af0, type: 3}
   player_weapon: {fileID: 0}
-  test_weapon: {fileID: 1341898433849956997, guid: 09dbba0400209ebbd93204ab0e22924b, type: 3}
 --- !u!114 &2133724852055023366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d21d1cb69d8d3448f071a8c3702ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  die:
+    m_PersistentCalls:
+      m_Calls: []
   max_health: 1
 --- !u!1 &2562605570812998236
 GameObject:
@@ -310,7 +311,7 @@ Transform:
   m_GameObject: {fileID: 3591121534360998887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.554, z: 0}
+  m_LocalPosition: {x: 0, y: -0.597, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

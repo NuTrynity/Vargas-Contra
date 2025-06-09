@@ -26,18 +26,17 @@ public class PlayerMovement : MonoBehaviour
 
     void flip_sprite()
     {
-        if (rb.linearVelocityX != 0f)
+        if (rb.linearVelocityX > 1.0f || rb.linearVelocityX < -1.0f)
         {
-            if (rb.linearVelocityX < 0f)
-            {
-                p_rotation = 180f;
-            }
-            else
+            if (rb.linearVelocityX > 0.0f)
             {
                 p_rotation = 0f;
             }
+            else
+            {
+                p_rotation = 180f;
+            }
         }
-
         transform.rotation = Quaternion.Euler(0f, p_rotation, 0f);
     }
 
@@ -53,6 +52,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool is_grounded()
     {
-        return Physics2D.OverlapCircle(ground_check.position, 0.2f, ground_layer);
+        return Physics2D.OverlapCircle(ground_check.position, 1f, ground_layer);
     }
 }
